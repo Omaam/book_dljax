@@ -1,0 +1,21 @@
+services:
+  work:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "work_container"
+    network_mode: host
+    volumes:
+      - .:/work
+      - ~/.Xauthority:/root/.Xauthority
+    environment:
+      - DISPLAY=$DISPLAY
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: 1
+            capabilities: [gpu]
+

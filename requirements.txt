@@ -1,0 +1,5 @@
+flax
+optax
+numpy
+matplotlib
+tensorflow
