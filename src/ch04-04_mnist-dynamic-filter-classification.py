@@ -129,7 +129,7 @@ def main():
                          epochs=16, batch_size=128)
 
     checkpoints.save_checkpoint(
-        ckpt_dir=pathlib.Path('../model').resolve(),
+        ckpt_dir=pathlib.Path('../models').resolve(),
         prefix='SingleLayerCNN_checkpoint_',
         target=state, step=16, overwrite=True
     )

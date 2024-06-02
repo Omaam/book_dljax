@@ -63,7 +63,7 @@ def main():
     print(jax.tree_util.tree_map(lambda x: x.shape, state.params))
 
     state = checkpoints.restore_checkpoint(
-        ckpt_dir=pathlib.Path('../model').resolve(),
+        ckpt_dir=pathlib.Path('../models').resolve(),
         prefix='SingleLayerCNN_checkpoint_',
         target=state
     )

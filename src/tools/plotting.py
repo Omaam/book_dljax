@@ -10,7 +10,8 @@ def plot_history(targets, label=None, x_range=None, y_range=None, ax=None):
     ax.plot(targets, label=label)
     ax.set_xlim(x_range)
     ax.set_ylim(y_range)
-    ax.legend()
+    if label is not None:
+        ax.legend()
     return ax
 
 
